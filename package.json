@@ -1,5 +1,5 @@
 {
-  "name": "@dreamstack/section-flow",
+  "name": "@dreamstack-us/section-flow",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -10,12 +10,12 @@
   "exports": {
     ".": {
       "import": {
-        "@dreamstack/source": "./src/index.ts",
+        "@dreamstack-us/source": "./src/index.ts",
         "types": "./dist/index.d.ts",
         "default": "./dist/index.js"
       },
       "require": {
-        "@dreamstack/source": "./src/index.ts",
+        "@dreamstack-us/source": "./src/index.ts",
         "types": "./dist/index.d.cts",
         "default": "./dist/index.cjs"
       }
