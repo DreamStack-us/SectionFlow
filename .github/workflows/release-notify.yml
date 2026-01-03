@@ -1,0 +1,99 @@
+name: Release Notifications
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 10
+
+      - name: Get release info
+        id: info
+        run: |
+          # Get changelog from recent commits
+          CHANGELOG=$(git log -5 --pretty=format:"• %s" --no-merges)
+          echo "changelog<<EOF" >> $GITHUB_OUTPUT
+          echo "$CHANGELOG" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Send Slack notification
+        uses: slackapi/slack-github-action@v1.27.0
+        with:
+          payload: |
+            {
+              "attachments": [
+                {
+                  "color": "#36a64f",
+                  "blocks": [
+                    {
+                      "type": "header",
+                      "text": {
+                        "type": "plain_text",
+                        "text": "SectionFlow ${{ github.event.release.tag_name }} Released",
+                        "emoji": true
+                      }
+                    },
+                    {
+                      "type": "section",
+                      "fields": [
+                        {
+                          "type": "mrkdwn",
+                          "text": "*Package:*\n@dreamstack-us/section-flow"
+                        },
+                        {
+                          "type": "mrkdwn",
+                          "text": "*Version:*\n${{ github.event.release.tag_name }}"
+                        },
+                        {
+                          "type": "mrkdwn",
+                          "text": "*npm:*\n<https://www.npmjs.com/package/@dreamstack-us/section-flow|View on npm>"
+                        },
+                        {
+                          "type": "mrkdwn",
+                          "text": "*Released by:*\n${{ github.actor }}"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "section",
+                      "text": {
+                        "type": "mrkdwn",
+                        "text": "*Changes:*\n${{ steps.info.outputs.changelog }}"
+                      }
+                    },
+                    {
+                      "type": "actions",
+                      "elements": [
+                        {
+                          "type": "button",
+                          "text": {
+                            "type": "plain_text",
+                            "text": "View Release",
+                            "emoji": true
+                          },
+                          "url": "${{ github.event.release.html_url }}"
+                        },
+                        {
+                          "type": "button",
+                          "text": {
+                            "type": "plain_text",
+                            "text": "View on npm",
+                            "emoji": true
+                          },
+                          "url": "https://www.npmjs.com/package/@dreamstack-us/section-flow"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_RELEASES_WEBHOOK_URL }}
+          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
