@@ -1,0 +1,50 @@
+{
+  "name": "@dreamstack/section-flow",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "High-performance, section-first list library for React Native",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "@dreamstack/source": "./src/index.ts",
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "@dreamstack/source": "./src/index.ts",
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "bun run build"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-native": ">=0.72.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.7.0",
+    "@types/react": "^19.0.0",
+    "react": "^19.0.0",
+    "react-native": "^0.76.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DreamStack-us/section-flow.git"
+  },
+  "author": "DreamStack <hello@dreamstack.us>",
+  "license": "MIT",
+  "keywords": ["react-native", "list", "sectionlist", "performance", "cell-recycling", "virtualization"]
+}
