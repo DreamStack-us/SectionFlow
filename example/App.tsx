@@ -1,7 +1,7 @@
 import React, { useRef, useCallback, useState } from 'react';
 import { StyleSheet, View, Text, SafeAreaView, Pressable } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { SectionFlow, type Section, type SectionFlowRef, type RenderItemInfo, type RenderSectionHeaderInfo } from '@dreamstack/section-flow';
+import { SectionFlow, type Section, type SectionFlowRef, type RenderItemInfo, type RenderSectionHeaderInfo } from '@dreamstack-us/section-flow';
 
 // Sample data types
 interface Contact {
