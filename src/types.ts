@@ -149,6 +149,7 @@ export interface SectionFlowProps<TItem> extends Omit<ScrollViewProps, 'children
 
   // Sticky headers
   stickySectionHeadersEnabled?: boolean;
+  stickyHeaderStyle?: StyleProp<ViewStyle>;
 
   // Collapsibility (Phase 2)
   collapsible?: boolean;
