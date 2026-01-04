@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "workspaces": ["packages/*"],
   "description": "High-performance, section-first list library for React Native",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -23,11 +24,17 @@
     "./package.json": "./package.json"
   },
   "files": ["dist", "README.md", "LICENSE"],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
-    "build": "tsdown",
+    "build": "tsdown && bun run --filter './packages/*' build",
+    "build:root": "tsdown",
     "dev": "tsdown --watch",
     "typecheck": "tsc --noEmit",
-    "prepublishOnly": "bun run build"
+    "release": "changeset publish",
+    "prepublishOnly": "bun run build:root"
   },
   "peerDependencies": {
     "react": ">=18.0.0",
@@ -42,11 +49,13 @@
     }
   },
   "devDependencies": {
-    "tsdown": "^0.6.0",
-    "typescript": "^5.7.0",
+    "@changesets/changelog-github": "^0.5.0",
+    "@changesets/cli": "^2.27.0",
     "@types/react": "^19.0.0",
     "react": "^19.0.0",
-    "react-native": "^0.76.0"
+    "react-native": "^0.76.0",
+    "tsdown": "^0.6.0",
+    "typescript": "^5.7.0"
   },
   "repository": {
     "type": "git",
