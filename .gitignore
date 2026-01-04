@@ -6,3 +6,6 @@ dist/
 example/.expo/
 example/node_modules/
 bun.lock
+
+# Personal thoughts (not shared)
+thoughts/srihari/
