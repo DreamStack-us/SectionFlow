@@ -71,7 +71,8 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
-    backgroundColor: '#fff', // Needed for shadow to be visible on iOS
+    // Note: backgroundColor is needed for shadow to be visible on iOS
+    // Users should set backgroundColor via stickyHeaderStyle prop or in their renderSectionHeader
   },
 });
 

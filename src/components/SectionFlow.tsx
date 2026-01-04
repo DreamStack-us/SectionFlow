@@ -64,6 +64,7 @@ function SectionFlowInner<TItem>(
     estimatedSectionFooterSize = 0,
     horizontal = false,
     stickySectionHeadersEnabled = true,
+    stickyHeaderStyle,
     collapsible = false,
     defaultCollapsed = [],
     onSectionToggle,
@@ -438,6 +439,7 @@ function SectionFlowInner<TItem>(
           sections={sections}
           renderSectionHeader={renderSectionHeader}
           horizontal={horizontal}
+          style={stickyHeaderStyle}
         />
       )}
 
