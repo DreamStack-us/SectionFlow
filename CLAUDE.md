@@ -46,11 +46,18 @@ src/
 - **Absolute Positioning:** All cells positioned absolutely for performance
 - **Type-based Pools:** Cells recycled by type for optimal reuse
 
+## Package Names
+
+This library is published under two names (both identical):
+- `sectionflow` - Short, easy to remember
+- `@dreamstack-us/section-flow` - Scoped under DreamStack org
+
 ## Quick Start
 
 ```tsx
-import { SectionFlow } from '@dreamstack-us/section-flow';
-import type { Section, RenderItemInfo, RenderSectionHeaderInfo } from '@dreamstack-us/section-flow';
+import { SectionFlow } from 'sectionflow';
+// or: import { SectionFlow } from '@dreamstack-us/section-flow';
+import type { Section, RenderItemInfo, RenderSectionHeaderInfo } from 'sectionflow';
 
 interface Task {
   id: string;
