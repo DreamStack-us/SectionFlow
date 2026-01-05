@@ -1,7 +1,6 @@
 {
   "name": "@dreamstack-us/section-flow",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.0.1",
   "type": "module",
   "workspaces": ["packages/*"],
   "description": "High-performance, section-first list library for React Native",

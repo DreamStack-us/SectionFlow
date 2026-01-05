@@ -1,7 +1,6 @@
 {
   "name": "sectionflow",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.0.1",
   "description": "Alias for @dreamstack-us/section-flow - High-performance React Native list library",
   "type": "module",
   "main": "./dist/index.cjs",
