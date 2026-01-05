@@ -1,4 +1,4 @@
-# @dreamstack/section-flow
+# SectionFlow
 
 High-performance, section-first list library for React Native. Drop-in replacement for SectionList with 10x better performance through cell recycling.
 
@@ -14,13 +14,26 @@ High-performance, section-first list library for React Native. Drop-in replaceme
 - **Chat UI Ready**: `alignItemsAtEnd`, `maintainScrollAtEnd` support
 
 ## Installation
+
 ```bash
-bun add @dreamstack/section-flow
+# Using the short name
+npm install sectionflow
+# or
+bun add sectionflow
+
+# Using the scoped name
+npm install @dreamstack-us/section-flow
+# or
+bun add @dreamstack-us/section-flow
 ```
 
+Both packages are identical - use whichever you prefer.
+
 ## Usage
+
 ```tsx
-import { SectionFlow } from '@dreamstack/section-flow';
+import { SectionFlow } from 'sectionflow';
+// or: import { SectionFlow } from '@dreamstack-us/section-flow';
 
 const sections = [
   { key: 'a', title: 'A', data: ['Alice', 'Adam'] },

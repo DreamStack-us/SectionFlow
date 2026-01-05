@@ -52,11 +52,24 @@ gh pr create --base main
 - **Typecheck**: `bun run typecheck`
 - **Versioning**: Changesets (`bun changeset`)
 
-## Publishing (When Ready)
+## Publishing
 
-Both packages are currently `"private": true`. When ready to publish:
+Both packages are published to npm:
+- `@dreamstack-us/section-flow` - Scoped package
+- `sectionflow` - Alias package
 
-1. Remove `"private": true` from root `package.json` and `packages/sectionflow/package.json`
-2. Create changeset: `bun changeset`
-3. Push - CI creates "Version Packages" PR
-4. Merge PR to publish both packages to npm
+Use changesets for versioning:
+1. Create changeset: `bun changeset`
+2. Push - CI creates "Version Packages" PR
+3. Merge PR to publish both packages to npm
+
+## CRITICAL: Versioning Rules
+
+**NEVER use version 0.1.0 as initial version. ALWAYS start at 0.0.1.**
+
+When creating new packages:
+- Initial version: `0.0.1`
+- Pre-release: `0.0.1-alpha.1`, `0.0.1-beta.1`
+- First stable: `0.1.0` (after validation)
+
+This ensures proper semver progression and professional versioning.
