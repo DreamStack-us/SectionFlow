@@ -19,7 +19,6 @@ const sidebars: SidebarsConfig = {
         'examples/basic-list',
         'examples/sticky-headers',
         'examples/collapsible-sections',
-        'examples/chat-ui',
         'examples/performance',
       ],
     },
