@@ -19,7 +19,7 @@
     },
     "./package.json": "./package.json"
   },
-  "files": ["dist"],
+  "files": ["dist", "README.md"],
   "scripts": {
     "build": "tsdown",
     "prepublishOnly": "bun run build"
