@@ -720,7 +720,7 @@ import { SectionFlow } from '@dreamstack-us/section-flow';
 
 - Open an issue on the [SectionFlow repo](https://github.com/DreamStack-us/SectionFlow)
 - Ask in the #engineering Slack channel
-- Check the [example app](../example/App.tsx) for working code
+- Check the [example app](https://github.com/DreamStack-us/SectionFlow/tree/main/example) for working code
 
 ---
 

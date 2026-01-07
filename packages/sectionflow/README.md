@@ -2,15 +2,13 @@
 
 High-performance, section-first list library for React Native. Drop-in replacement for SectionList with 10x better performance through cell recycling.
 
-> **Development Status**: This library is in active development and not yet ready for production use.
-
 ## Features
 
 - **Cell Recycling**: 10x JS thread improvement over virtualization
 - **Section-First**: Native section support without data flattening
 - **Type-Safe**: Full TypeScript support with proper generics
-- **Sticky Headers**: Headers that actually work
-- **Collapsible Sections**: Built-in, no external state needed
+- **Sticky Headers**: Section headers that stick during scroll
+- **Collapsible Sections**: Built-in expand/collapse support
 
 ## Installation
 
@@ -26,18 +24,22 @@ bun add @dreamstack-us/section-flow
 import { SectionFlow } from '@dreamstack-us/section-flow';
 
 const sections = [
-  { key: 'a', title: 'A', data: ['Alice', 'Adam'] },
-  { key: 'b', title: 'B', data: ['Bob', 'Beth'] },
+  { key: 'fruits', title: 'Fruits', data: ['Apple', 'Banana', 'Orange'] },
+  { key: 'veggies', title: 'Vegetables', data: ['Carrot', 'Broccoli'] },
 ];
 
 <SectionFlow
   sections={sections}
   renderItem={({ item }) => <Text>{item}</Text>}
   renderSectionHeader={({ section }) => <Text>{section.title}</Text>}
-  stickyHeaders
+  stickySectionHeadersEnabled
   collapsible
 />
 ```
+
+## Documentation
+
+Full documentation available at: https://dreamstack-us.github.io/SectionFlow/
 
 ## License
 

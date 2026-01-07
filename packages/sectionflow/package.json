@@ -19,13 +19,13 @@
     },
     "./package.json": "./package.json"
   },
-  "files": ["dist"],
+  "files": ["dist", "README.md"],
   "scripts": {
     "build": "tsdown",
     "prepublishOnly": "bun run build"
   },
   "dependencies": {
-    "@dreamstack-us/section-flow": "file:../.."
+    "@dreamstack-us/section-flow": ">=0.0.1"
   },
   "publishConfig": {
     "access": "public",

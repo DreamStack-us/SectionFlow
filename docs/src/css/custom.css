@@ -1,0 +1,136 @@
+/**
+ * SectionFlow Documentation Theme
+ * Beach/Ocean vibes with sand (#FDF6E3) and ocean blues
+ */
+
+:root {
+  /* Ocean blue primary colors */
+  --ifm-color-primary: #0891b2; /* cyan-600 */
+  --ifm-color-primary-dark: #0e7490; /* cyan-700 */
+  --ifm-color-primary-darker: #155e75; /* cyan-800 */
+  --ifm-color-primary-darkest: #164e63; /* cyan-900 */
+  --ifm-color-primary-light: #06b6d4; /* cyan-500 */
+  --ifm-color-primary-lighter: #22d3ee; /* cyan-400 */
+  --ifm-color-primary-lightest: #67e8f9; /* cyan-300 */
+
+  /* Sand background */
+  --ifm-background-color: #FDF6E3;
+  --ifm-background-surface-color: #fff;
+
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(8, 145, 178, 0.1);
+
+  /* Navbar */
+  --ifm-navbar-background-color: #FDF6E3;
+  --ifm-navbar-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
+  /* Footer */
+  --ifm-footer-background-color: #1e3a5f;
+}
+
+[data-theme='dark'] {
+  /* Dark navbar */
+  --ifm-navbar-background-color: #1e293b;
+  --ifm-navbar-link-color: #f1f5f9;
+  --ifm-color-primary: #22d3ee; /* cyan-400 */
+  --ifm-color-primary-dark: #06b6d4; /* cyan-500 */
+  --ifm-color-primary-darker: #0891b2; /* cyan-600 */
+  --ifm-color-primary-darkest: #0e7490; /* cyan-700 */
+  --ifm-color-primary-light: #67e8f9; /* cyan-300 */
+  --ifm-color-primary-lighter: #a5f3fc; /* cyan-200 */
+  --ifm-color-primary-lightest: #cffafe; /* cyan-100 */
+
+  --ifm-background-color: #1a202c;
+  --docusaurus-highlighted-code-line-bg: rgba(34, 211, 238, 0.15);
+}
+
+/* Snack Player styles for Expo Snack embeds */
+.snack-player {
+  height: 505px;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 16px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+}
+
+/* Hero section on homepage */
+.hero {
+  background: linear-gradient(135deg, #FDF6E3 0%, #e8dcc8 100%);
+}
+
+[data-theme='dark'] .hero {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+}
+
+/* Feature cards */
+.feature-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Code blocks */
+.prism-code {
+  border-radius: 8px;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navbar logo */
+.navbar__logo {
+  height: 2rem;
+}
+
+.navbar__logo img {
+  border-radius: 6px;
+}
+
+/* Sidebar */
+.menu__link--active {
+  font-weight: 600;
+}
+
+/* Table of contents */
+.table-of-contents__link--active {
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+}
+
+/* Admonitions */
+.admonition {
+  border-radius: 8px;
+}
+
+/* Tabs */
+.tabs__item--active {
+  border-bottom-color: var(--ifm-color-primary);
+}
+
+/* Footer copyright - right aligned */
+.footer__copyright {
+  text-align: right;
+}
+
+/* Dark mode navbar title */
+[data-theme='dark'] .navbar__title {
+  color: #f1f5f9;
+}
+
+[data-theme='dark'] .navbar__link {
+  color: #e2e8f0;
+}
