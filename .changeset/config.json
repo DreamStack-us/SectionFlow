@@ -3,7 +3,7 @@
   "changelog": ["@changesets/changelog-github", { "repo": "DreamStack-us/SectionFlow" }],
   "commit": false,
   "fixed": [],
-  "linked": [["@dreamstack-us/section-flow", "sectionflow"]],
+  "linked": [],
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
