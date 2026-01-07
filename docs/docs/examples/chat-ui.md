@@ -8,10 +8,10 @@ Build a chat interface with inverted scrolling where new messages appear at the 
 
 ## Live Example
 
-```SnackPlayer name=Chat%20UI&dependencies=sectionflow,react-native-gesture-handler,react-native-reanimated
+```SnackPlayer name=Chat%20UI&dependencies=@dreamstack-us/section-flow,react-native-gesture-handler,react-native-reanimated
 import React, { useRef, useState } from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableOpacity, KeyboardAvoidingView, Platform } from 'react-native';
-import { SectionFlow } from 'sectionflow';
+import { SectionFlow } from '@dreamstack-us/section-flow';
 
 const initialMessages = [
   {

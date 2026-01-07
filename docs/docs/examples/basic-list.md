@@ -8,10 +8,10 @@ A simple sectioned list with items grouped by category.
 
 ## Live Example
 
-```SnackPlayer name=Basic%20List&dependencies=sectionflow,react-native-gesture-handler,react-native-reanimated
+```SnackPlayer name=Basic%20List&dependencies=@dreamstack-us/section-flow,react-native-gesture-handler,react-native-reanimated
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { SectionFlow } from 'sectionflow';
+import { SectionFlow } from '@dreamstack-us/section-flow';
 
 const sections = [
   {

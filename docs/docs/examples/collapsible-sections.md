@@ -8,10 +8,10 @@ Allow users to expand and collapse sections to focus on what matters.
 
 ## Live Example
 
-```SnackPlayer name=Collapsible%20Sections&dependencies=sectionflow,react-native-gesture-handler,react-native-reanimated
+```SnackPlayer name=Collapsible%20Sections&dependencies=@dreamstack-us/section-flow,react-native-gesture-handler,react-native-reanimated
 import React, { useRef } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import { SectionFlow } from 'sectionflow';
+import { SectionFlow } from '@dreamstack-us/section-flow';
 
 const sections = [
   {
