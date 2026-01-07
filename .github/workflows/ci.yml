@@ -93,7 +93,13 @@ jobs:
 
       - name: Install example dependencies
         working-directory: example
-        run: bun install
+        run: bun install --ignore-scripts
+
+      - name: Setup local package for Metro
+        run: |
+          mkdir -p example/node_modules/@dreamstack-us/section-flow
+          cp -r dist example/node_modules/@dreamstack-us/section-flow/
+          cp package.json example/node_modules/@dreamstack-us/section-flow/
 
       - name: Install web dependencies for example
         working-directory: example
