@@ -1,4 +1,4 @@
-import type {ReactNode} from 'react';
+import {type ReactNode, useState} from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -8,8 +8,31 @@ import Heading from '@theme/Heading';
 
 import styles from './index.module.css';
 
+function CopyButton({text}: {text: string}) {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
+    await navigator.clipboard.writeText(text);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
+    <button
+      className={styles.copyButton}
+      onClick={handleCopy}
+      title="Copy to clipboard"
+      aria-label="Copy to clipboard"
+    >
+      {copied ? '✓' : '📋'}
+    </button>
+  );
+}
+
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
+  const installCommand = 'npm install sectionflow';
+
   return (
     <header className={clsx('hero', styles.heroBanner)}>
       <div className="container">
@@ -35,7 +58,8 @@ function HomepageHeader() {
           </Link>
         </div>
         <div className={styles.installCommand}>
-          <code>npm install sectionflow</code>
+          <code>{installCommand}</code>
+          <CopyButton text={installCommand} />
         </div>
       </div>
     </header>

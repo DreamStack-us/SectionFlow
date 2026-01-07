@@ -29,6 +29,9 @@
 }
 
 [data-theme='dark'] {
+  /* Dark navbar */
+  --ifm-navbar-background-color: #1e293b;
+  --ifm-navbar-link-color: #f1f5f9;
   --ifm-color-primary: #22d3ee; /* cyan-400 */
   --ifm-color-primary-dark: #06b6d4; /* cyan-500 */
   --ifm-color-primary-darker: #0891b2; /* cyan-600 */
@@ -93,6 +96,10 @@ a:hover {
   height: 2rem;
 }
 
+.navbar__logo img {
+  border-radius: 6px;
+}
+
 /* Sidebar */
 .menu__link--active {
   font-weight: 600;
@@ -112,4 +119,18 @@ a:hover {
 /* Tabs */
 .tabs__item--active {
   border-bottom-color: var(--ifm-color-primary);
+}
+
+/* Footer copyright - right aligned */
+.footer__copyright {
+  text-align: right;
+}
+
+/* Dark mode navbar title */
+[data-theme='dark'] .navbar__title {
+  color: #f1f5f9;
+}
+
+[data-theme='dark'] .navbar__link {
+  color: #e2e8f0;
 }
