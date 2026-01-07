@@ -25,7 +25,7 @@
     "prepublishOnly": "bun run build"
   },
   "dependencies": {
-    "@dreamstack-us/section-flow": "file:../.."
+    "@dreamstack-us/section-flow": "*"
   },
   "publishConfig": {
     "access": "public",
