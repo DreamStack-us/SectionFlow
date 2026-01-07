@@ -13,17 +13,15 @@ High-performance, section-first list library for React Native. Drop-in replaceme
 ## Installation
 
 ```bash
-npm install sectionflow
+npm install @dreamstack-us/section-flow
 # or
-bun add sectionflow
+bun add @dreamstack-us/section-flow
 ```
-
-This package is an alias for `@dreamstack-us/section-flow` - both are identical.
 
 ## Usage
 
 ```tsx
-import { SectionFlow } from 'sectionflow';
+import { SectionFlow } from '@dreamstack-us/section-flow';
 
 const sections = [
   { key: 'fruits', title: 'Fruits', data: ['Apple', 'Banana', 'Orange'] },
