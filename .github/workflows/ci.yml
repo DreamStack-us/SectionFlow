@@ -85,21 +85,9 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Install root dependencies
-        run: bun install
-
-      - name: Build package first
-        run: bun run build
-
       - name: Install example dependencies
         working-directory: example
-        run: bun install --ignore-scripts
-
-      - name: Setup local package for Metro
-        run: |
-          mkdir -p example/node_modules/@dreamstack-us/section-flow
-          cp -r dist example/node_modules/@dreamstack-us/section-flow/
-          cp package.json example/node_modules/@dreamstack-us/section-flow/
+        run: bun install
 
       - name: Install web dependencies for example
         working-directory: example
