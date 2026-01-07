@@ -2,7 +2,6 @@
   "name": "@dreamstack-us/section-flow",
   "version": "0.0.1",
   "type": "module",
-  "workspaces": ["packages/*"],
   "description": "High-performance, section-first list library for React Native",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -28,7 +27,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "build": "tsdown && bun run --filter './packages/*' build",
+    "build": "tsdown",
     "build:root": "tsdown",
     "dev": "tsdown --watch",
     "typecheck": "tsc --noEmit",
