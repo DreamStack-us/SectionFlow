@@ -95,6 +95,10 @@ jobs:
         working-directory: example
         run: bun install
 
+      - name: Install web dependencies
+        working-directory: example
+        run: bunx expo install react-dom react-native-web @expo/metro-runtime
+
       - name: Export example for web
         working-directory: example
         run: bunx expo export --platform web
