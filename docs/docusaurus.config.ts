@@ -1,6 +1,7 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import remarkSnackPlayer from './plugins/remark-snackplayer/src/index';
 
 const config: Config = {
   title: 'SectionFlow',
@@ -31,7 +32,7 @@ const config: Config = {
   scripts: [
     {
       src: 'https://snack.expo.dev/embed.js',
-      defer: true,
+      async: true,
     },
   ],
 
@@ -42,6 +43,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/DreamStack-us/SectionFlow/tree/main/docs/',
+          remarkPlugins: [remarkSnackPlayer],
         },
         blog: false, // Disable blog
         theme: {
