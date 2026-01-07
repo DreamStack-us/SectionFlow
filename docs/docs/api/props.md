@@ -292,7 +292,7 @@ When to dismiss keyboard while scrolling.
 inverted?: boolean
 ```
 
-Invert the scroll direction (for chat UIs). Default: `false`
+Invert the scroll direction. Default: `false`
 
 ### `ListEmptyComponent`
 

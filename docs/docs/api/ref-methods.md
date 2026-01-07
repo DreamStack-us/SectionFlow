@@ -236,36 +236,6 @@ console.log(visible);
 // ]
 ```
 
-## Example: Chat UI with Auto-Scroll
-
-```tsx
-function ChatScreen() {
-  const ref = useRef<SectionFlowRef>(null);
-  const [messages, setMessages] = useState(initialMessages);
-
-  const sendMessage = (text: string) => {
-    setMessages(prev => [...prev, { id: Date.now(), text }]);
-
-    // Scroll to the new message
-    setTimeout(() => {
-      ref.current?.scrollToEnd({ animated: true });
-    }, 100);
-  };
-
-  return (
-    <View style={{ flex: 1 }}>
-      <SectionFlow
-        ref={ref}
-        sections={[{ key: 'messages', title: 'Chat', data: messages }]}
-        renderItem={renderMessage}
-        inverted={true}
-      />
-      <MessageInput onSend={sendMessage} />
-    </View>
-  );
-}
-```
-
 ## Example: Jump to Section Menu
 
 ```tsx
