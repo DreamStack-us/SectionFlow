@@ -1,6 +1,6 @@
 {
   "name": "sectionflow",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Alias for @dreamstack-us/section-flow - High-performance React Native list library",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -19,13 +19,16 @@
     },
     "./package.json": "./package.json"
   },
-  "files": ["dist", "README.md"],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsdown",
     "prepublishOnly": "bun run build"
   },
   "dependencies": {
-    "@dreamstack-us/section-flow": ">=0.0.3"
+    "@dreamstack-us/section-flow": ">=0.0.4"
   },
   "publishConfig": {
     "access": "public",
@@ -36,7 +39,14 @@
     "url": "git+https://github.com/DreamStack-us/SectionFlow.git",
     "directory": "packages/sectionflow"
   },
-  "keywords": ["react-native", "list", "sectionlist", "flashlist", "virtualization", "performance"],
+  "keywords": [
+    "react-native",
+    "list",
+    "sectionlist",
+    "flashlist",
+    "virtualization",
+    "performance"
+  ],
   "author": "DreamStack <hello@dreamstack.us>",
   "license": "MIT"
 }
