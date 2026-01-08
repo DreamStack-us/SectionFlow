@@ -32,6 +32,7 @@
     "build:root": "tsdown",
     "dev": "tsdown --watch",
     "typecheck": "tsc --noEmit",
+    "version": "changeset version",
     "release": "changeset publish",
     "prepublishOnly": "bun run build:root"
   },
