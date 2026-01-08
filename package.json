@@ -24,15 +24,15 @@
   },
   "files": ["dist", "README.md", "LICENSE"],
   "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
+    "access": "public"
   },
   "scripts": {
     "build": "tsdown && bun run --filter './packages/*' build",
     "build:root": "tsdown",
     "dev": "tsdown --watch",
     "typecheck": "tsc --noEmit",
-    "release": "changeset publish",
+    "version": "changeset version",
+    "release": "bun run build && changeset publish",
     "prepublishOnly": "bun run build:root"
   },
   "peerDependencies": {
