@@ -159,10 +159,10 @@ if (__DEV__) {
 
 ## Live Performance Demo
 
-```SnackPlayer name=Performance%20Demo&dependencies=@dreamstack-us/section-flow,react-native-gesture-handler,react-native-reanimated
+```SnackPlayer name=Performance%20Demo&dependencies=sectionflow,react-native-gesture-handler,react-native-reanimated
 import React, { useMemo } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { SectionFlow } from '@dreamstack-us/section-flow';
+import { SectionFlow } from 'sectionflow';
 
 // Generate 1000 items across 10 sections
 const generateData = () => {
