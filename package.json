@@ -1,8 +1,11 @@
 {
   "name": "@dreamstack-us/section-flow",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
-  "workspaces": [".", "packages/*"],
+  "workspaces": [
+    ".",
+    "packages/*"
+  ],
   "description": "High-performance, section-first list library for React Native",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -22,7 +25,11 @@
     },
     "./package.json": "./package.json"
   },
-  "files": ["dist", "README.md", "LICENSE"],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
@@ -63,5 +70,14 @@
   },
   "author": "DreamStack <hello@dreamstack.us>",
   "license": "MIT",
-  "keywords": ["react-native", "list", "sectionlist", "performance", "cell-recycling", "virtualization", "flashlist", "new-architecture"]
+  "keywords": [
+    "react-native",
+    "list",
+    "sectionlist",
+    "performance",
+    "cell-recycling",
+    "virtualization",
+    "flashlist",
+    "new-architecture"
+  ]
 }
