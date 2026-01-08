@@ -8,10 +8,10 @@ Section headers that stick to the top of the screen while scrolling through thei
 
 ## Live Example
 
-```SnackPlayer name=Sticky%20Headers&dependencies=@dreamstack-us/section-flow,react-native-gesture-handler,react-native-reanimated
+```SnackPlayer name=Sticky%20Headers&dependencies=sectionflow,react-native-gesture-handler,react-native-reanimated
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { SectionFlow } from '@dreamstack-us/section-flow';
+import { SectionFlow } from 'sectionflow';
 
 // Generate sample data
 const generateTasks = (status, count) => {
