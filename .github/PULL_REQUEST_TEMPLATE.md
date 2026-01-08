@@ -1,16 +1,17 @@
 ## Summary
 
-<!-- 
-This PR contains work for one or more Linear tickets.
-Each ticket's testing steps are documented either below (for the first ticket)
-or in subsequent comments using the OSCAR_TICKET_WORK format.
--->
-
 **Tickets in this PR:**
-<!-- Engineer: Update this list as you stack more tickets -->
-- [ ] DRE-XXX (primary)
-- [ ] DRE-YYY
-- [ ] DRE-ZZZ
+- [ ] DRE-XXX (primary - documented below)
+- [ ] DRE-YYY (add as comment)
+- [ ] DRE-ZZZ (add as comment)
+
+> **📋 Multi-Ticket Workflow**
+>
+> 1. **First ticket** → Document in this PR description (below)
+> 2. **Additional tickets** → Add each as a **separate PR comment** using the template at [`.github/STACKED_TICKET_COMMENT_TEMPLATE.md`](.github/STACKED_TICKET_COMMENT_TEMPLATE.md)
+> 3. **QA Agent** → Parses description + all comments to validate each ticket independently
+>
+> This ensures proper validation of stacked work. Each ticket needs its own testing steps!
 
 ## Branch Strategy
 
@@ -23,7 +24,15 @@ or in subsequent comments using the OSCAR_TICKET_WORK format.
 
 ## 🎫 DRE-XXX: [Ticket Title]
 
-<!-- First ticket documented in PR description. Additional tickets go in comments. -->
+<!--
+⚠️  THIS SECTION IS FOR THE PRIMARY TICKET ONLY
+
+For additional tickets, add a NEW COMMENT on this PR using the template at:
+.github/STACKED_TICKET_COMMENT_TEMPLATE.md
+
+Do NOT add multiple ticket sections to this description - QA Agent parses
+each comment separately for proper validation.
+-->
 
 ### Changes
 - [ ] UI/Frontend changes
