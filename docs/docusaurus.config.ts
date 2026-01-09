@@ -5,7 +5,7 @@ import remarkSnackPlayer from './plugins/remark-snackplayer/src/index';
 
 const config: Config = {
   title: 'SectionFlow',
-  tagline: 'High-performance section list for React Native with cell recycling',
+  tagline: 'High-performance section list for React Native + Web',
   favicon: 'img/favicon.ico',
 
   future: {
