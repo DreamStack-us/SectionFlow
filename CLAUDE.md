@@ -1,6 +1,6 @@
 # SectionFlow
 
-High-performance section list for React Native with cell recycling.
+High-performance section list for React Native + Web.
 
 ## Commands
 
