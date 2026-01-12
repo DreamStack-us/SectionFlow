@@ -60,6 +60,12 @@
   color: #475569;
 }
 
+.installCommand code {
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
 [data-theme='dark'] .installCommand {
   background: rgba(255, 255, 255, 0.1);
   color: #e2e8f0;
