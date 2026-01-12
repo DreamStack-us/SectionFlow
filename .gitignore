@@ -7,9 +7,6 @@ example/.expo/
 example/node_modules/
 bun.lock
 
-# Personal thoughts (not shared)
-thoughts/srihari/
-thoughts/*/personal/
-
-# Local settings with credentials
-.claude/settings.local.json
+# Claude Code (private)
+.claude/
+thoughts/
