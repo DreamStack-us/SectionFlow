@@ -84,9 +84,9 @@ function MyList() {
 }
 ```
 
-## Integration Workflow
+## Internal Resources
 
-See `.claude/workflows/integration-feedback.md` for handling feedback from consuming projects.
+DreamStack team members: run `git submodule update --init --recursive` to access internal agents and workflows at `.internal/sectionflow/`.
 
 ## Related Projects
 
